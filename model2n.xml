@@ -1,0 +1,63 @@
+<mujoco model="single_twist_tendon_n2">
+  <compiler angle="radian" meshdir="assets/models" autolimits="true"/>
+  <option gravity="0 0 -9.81" timestep="0.0005" integrator="implicitfast"/>
+  <statistic center="0 0 0.0118" extent="0.0300"/>
+
+  <asset>
+    <mesh name="notch_mesh"  file="notch.stl"  scale="0.001 0.001 0.001"/>
+    <mesh name="distal_mesh" file="distal.stl" scale="0.001 0.001 0.001"/>
+    <material name="silicone" rgba="0.2 0.8 0.9 1" specular="0.5" shininess="0.5"/>
+    <material name="floor" rgba="0.9 0.9 0.9 1" reflectance="0"/>
+  </asset>
+
+  <default>
+    <default class="bend">
+      <joint type="hinge" axis="0 1 0" stiffness="0.0137" damping="0.0002341" armature="1e-06" range="-0.6000 0.6000"/>
+    </default>
+    <default class="twist">
+      <joint type="hinge" axis="0 0 1" stiffness="0.009135" damping="0.0001911" armature="1e-06" range="-2.2500 2.2500"/>
+    </default>
+    <default class="seg">
+      <geom type="mesh" material="silicone" density="1100" contype="0" conaffinity="0"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <light pos="0 0 0.3" dir="0 0 -1" directional="true"/>
+    <geom type="plane" size="0.3 0.3 0.01" material="floor"/>
+    <body name="base" pos="0 0 0.004">
+      <geom type="cylinder" size="0.004 0.004" rgba="0.3 0.3 0.3 1"/>
+      <body name="notch_1" pos="0 0 0.004">
+        <joint name="bend_1" class="bend" pos="0 0 0.00075"/>
+        <joint name="twist_1" class="twist"/>
+        <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+        <body name="notch_2" pos="0 0 0.003">
+          <joint name="bend_2" class="bend" pos="0 0 0.00075"/>
+          <joint name="twist_2" class="twist"/>
+          <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+          <body name="distal_tip" pos="0 0 0.003">
+            <geom class="seg" mesh="distal_mesh" pos="-0.00175 0.00175 -0.0485" quat="0.70710678 0.70710678 0 0"/>
+            <site name="tip" pos="0 0 0.0015" size="0.0005" rgba="1 0 0 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <!-- 1 sợi tendon = 2 đầu vào: (kéo/đẩy) và (xoắn). Tổng góc chia đều cho các đốt -->
+  <tendon>
+    <fixed name="bend_total">
+      <joint joint="bend_1" coef="1"/>
+      <joint joint="bend_2" coef="1"/>
+    </fixed>
+    <fixed name="twist_total">
+      <joint joint="twist_1" coef="1"/>
+      <joint joint="twist_2" coef="1"/>
+    </fixed>
+  </tendon>
+
+  <actuator>
+    <position name="pull_push" tendon="bend_total"  kp="0.06851" ctrlrange="-1.2000 1.2000"/>
+    <position name="twist"     tendon="twist_total" kp="0.04567" ctrlrange="-4.5000 4.5000"/>
+  </actuator>
+</mujoco>
