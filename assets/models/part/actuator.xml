@@ -1,0 +1,11 @@
+<mujocoinclude>
+  <actuator>
+    <!-- pull_push: điều khiển độ dài dây. ctrl = độ DÀI THÊM (m) so với lúc robot thẳng; ctrl<0 là kéo.
+         Dạng position được viết thành general để ctrl=0 ứng với tư thế thẳng:
+         force = kp*ctrl + kp*L0 - kp*length,  L0 = độ dài dây khi thẳng = 0.049400 m.
+         kp = 0.06851 / R^2 (R = 0.00104 m) để tương đương actuator cũ trên tổng góc. -->
+    <general name="pull_push" tendon="tendon_pull" gaintype="fixed" biastype="affine"
+             gainprm="63300" biasprm="3127.02 -63300 0" ctrlrange="-0.0035 0.0035"/>
+    <position name="twist" tendon="twist_total" kp="0.04567" ctrlrange="-4.5000 4.5000"/>
+  </actuator>
+</mujocoinclude>

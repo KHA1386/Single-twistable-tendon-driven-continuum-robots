@@ -1,0 +1,63 @@
+<mujocoinclude>
+  <tendon>
+    <!-- Dây thật: đi qua lỗ của từng notch, neo ở đầu distal. Dây lệch -x so với trục nên kéo dây sẽ uốn robot. -->
+    <spatial name="tendon_pull" width="0.0004" rgba="1 0.3 0.3 1">
+      <site site="s_base"/>
+      <site site="s_1"/>
+      <site site="s_2"/>
+      <site site="s_3"/>
+      <site site="s_4"/>
+      <site site="s_5"/>
+      <site site="s_6"/>
+      <site site="s_7"/>
+      <site site="s_8"/>
+      <site site="s_9"/>
+      <site site="s_10"/>
+      <site site="s_11"/>
+      <site site="s_12"/>
+      <site site="s_13"/>
+      <site site="s_14"/>
+      <site site="s_15"/>
+      <site site="s_16"/>
+      <site site="s_tip"/>
+    </spatial>
+
+    <!-- Giữ lại từ bản cũ: tổng góc uốn (chỉ để đọc), và tổng góc xoắn (được actuator twist điều khiển) -->
+    <fixed name="bend_total">
+      <joint joint="bend_1" coef="1"/>
+      <joint joint="bend_2" coef="1"/>
+      <joint joint="bend_3" coef="1"/>
+      <joint joint="bend_4" coef="1"/>
+      <joint joint="bend_5" coef="1"/>
+      <joint joint="bend_6" coef="1"/>
+      <joint joint="bend_7" coef="1"/>
+      <joint joint="bend_8" coef="1"/>
+      <joint joint="bend_9" coef="1"/>
+      <joint joint="bend_10" coef="1"/>
+      <joint joint="bend_11" coef="1"/>
+      <joint joint="bend_12" coef="1"/>
+      <joint joint="bend_13" coef="1"/>
+      <joint joint="bend_14" coef="1"/>
+      <joint joint="bend_15" coef="1"/>
+      <joint joint="bend_16" coef="1"/>
+    </fixed>
+    <fixed name="twist_total">
+      <joint joint="twist_1" coef="1"/>
+      <joint joint="twist_2" coef="1"/>
+      <joint joint="twist_3" coef="1"/>
+      <joint joint="twist_4" coef="1"/>
+      <joint joint="twist_5" coef="1"/>
+      <joint joint="twist_6" coef="1"/>
+      <joint joint="twist_7" coef="1"/>
+      <joint joint="twist_8" coef="1"/>
+      <joint joint="twist_9" coef="1"/>
+      <joint joint="twist_10" coef="1"/>
+      <joint joint="twist_11" coef="1"/>
+      <joint joint="twist_12" coef="1"/>
+      <joint joint="twist_13" coef="1"/>
+      <joint joint="twist_14" coef="1"/>
+      <joint joint="twist_15" coef="1"/>
+      <joint joint="twist_16" coef="1"/>
+    </fixed>
+  </tendon>
+</mujocoinclude>

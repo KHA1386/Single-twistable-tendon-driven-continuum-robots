@@ -1,0 +1,30 @@
+<mujocoinclude>
+  <compiler angle="radian" autolimits="true" meshdir="D:/LAB/1. mujoco project/project_with_BD/single twist tendon in mujoco/assets/mesh"/>  <option gravity="0 0 -9.81" timestep="0.0005" integrator="implicitfast"/>
+  <statistic center="0 0 0.0328" extent="0.1237"/>
+
+  <asset>
+    <mesh name="notch_mesh"  file="notch.stl"  scale="0.001 0.001 0.001"/>
+    <mesh name="distal_mesh" file="distal.stl" scale="0.001 0.001 0.001"/>
+    <material name="silicone" rgba="0.2 0.8 0.9 1" specular="0.5" shininess="0.5"/>
+    <material name="floor" rgba="0.9 0.9 0.9 1" reflectance="0"/>
+  </asset>
+
+  <default>
+    <!-- Khớp đàn hồi cho mỗi notch: 2 trục uốn vuông góc + 1 trục xoắn, cùng một điểm. -->
+    <default class="bend">   <!-- uốn quanh trục y: mặt phẳng của dây kéo -->
+      <joint type="hinge" axis="0 1 0" stiffness="0.0137" damping="0.0002341" armature="1e-06" range="-0.1963 0.1963"/>
+    </default>
+    <default class="bend2">  <!-- uốn quanh trục x: trục uốn thứ hai (MỚI). Độ cứng đang đặt bằng trục y -->
+      <joint type="hinge" axis="1 0 0" stiffness="0.0137" damping="0.0002341" armature="1e-06" range="-0.1963 0.1963"/>
+    </default>
+    <default class="twist">
+      <joint type="hinge" axis="0 0 1" stiffness="0.009135" damping="0.0001911" armature="1e-06" range="-0.2812 0.2812"/>
+    </default>
+    <default class="seg">
+      <geom type="mesh" material="silicone" density="1100" contype="0" conaffinity="0"/>
+    </default>
+    <default class="hole">   <!-- site tại lỗ luồn dây -->
+      <site size="0.0002" rgba="1 0.2 0.2 0"/>
+    </default>
+  </default>
+</mujocoinclude>

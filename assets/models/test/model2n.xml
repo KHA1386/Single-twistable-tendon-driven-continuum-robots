@@ -1,5 +1,5 @@
 <mujoco model="single_twist_tendon_n2">
-  <compiler angle="radian" meshdir="assets/models" autolimits="true"/>
+  <compiler angle="radian" autolimits="true"/>
   <option gravity="0 0 -9.81" timestep="0.0005" integrator="implicitfast"/>
   <statistic center="0 0 0.0118" extent="0.0300"/>
 

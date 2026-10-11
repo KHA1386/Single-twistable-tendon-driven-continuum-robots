@@ -1,0 +1,123 @@
+<mujocoinclude>
+  <body name="base" pos="0 0 0.004">
+    <geom type="cylinder" size="0.004 0.004" rgba="0.3 0.3 0.3 1"/>
+    <site name="s_base" class="hole" pos="-0.00104 0 0.004"/>
+    <body name="notch_1" pos="0 0 0.004">
+      <joint name="bend_1"  class="bend"  pos="0 0 0.00075"/>
+      <joint name="bend2_1" class="bend2" pos="0 0 0.00075"/>
+      <joint name="twist_1" class="twist" pos="0 0 0.00075"/>
+      <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+      <site name="s_1" class="hole" pos="-0.00104 0 0.00075"/>
+      <body name="notch_2" pos="0 0 0.003">
+        <joint name="bend_2"  class="bend"  pos="0 0 0.00075"/>
+        <joint name="bend2_2" class="bend2" pos="0 0 0.00075"/>
+        <joint name="twist_2" class="twist" pos="0 0 0.00075"/>
+        <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+        <site name="s_2" class="hole" pos="-0.00104 0 0.00075"/>
+        <body name="notch_3" pos="0 0 0.003">
+          <joint name="bend_3"  class="bend"  pos="0 0 0.00075"/>
+          <joint name="bend2_3" class="bend2" pos="0 0 0.00075"/>
+          <joint name="twist_3" class="twist" pos="0 0 0.00075"/>
+          <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+          <site name="s_3" class="hole" pos="-0.00104 0 0.00075"/>
+          <body name="notch_4" pos="0 0 0.003">
+            <joint name="bend_4"  class="bend"  pos="0 0 0.00075"/>
+            <joint name="bend2_4" class="bend2" pos="0 0 0.00075"/>
+            <joint name="twist_4" class="twist" pos="0 0 0.00075"/>
+            <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+            <site name="s_4" class="hole" pos="-0.00104 0 0.00075"/>
+            <body name="notch_5" pos="0 0 0.003">
+              <joint name="bend_5"  class="bend"  pos="0 0 0.00075"/>
+              <joint name="bend2_5" class="bend2" pos="0 0 0.00075"/>
+              <joint name="twist_5" class="twist" pos="0 0 0.00075"/>
+              <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+              <site name="s_5" class="hole" pos="-0.00104 0 0.00075"/>
+              <body name="notch_6" pos="0 0 0.003">
+                <joint name="bend_6"  class="bend"  pos="0 0 0.00075"/>
+                <joint name="bend2_6" class="bend2" pos="0 0 0.00075"/>
+                <joint name="twist_6" class="twist" pos="0 0 0.00075"/>
+                <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                <site name="s_6" class="hole" pos="-0.00104 0 0.00075"/>
+                <body name="notch_7" pos="0 0 0.003">
+                  <joint name="bend_7"  class="bend"  pos="0 0 0.00075"/>
+                  <joint name="bend2_7" class="bend2" pos="0 0 0.00075"/>
+                  <joint name="twist_7" class="twist" pos="0 0 0.00075"/>
+                  <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                  <site name="s_7" class="hole" pos="-0.00104 0 0.00075"/>
+                  <body name="notch_8" pos="0 0 0.003">
+                    <joint name="bend_8"  class="bend"  pos="0 0 0.00075"/>
+                    <joint name="bend2_8" class="bend2" pos="0 0 0.00075"/>
+                    <joint name="twist_8" class="twist" pos="0 0 0.00075"/>
+                    <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                    <site name="s_8" class="hole" pos="-0.00104 0 0.00075"/>
+                    <body name="notch_9" pos="0 0 0.003">
+                      <joint name="bend_9"  class="bend"  pos="0 0 0.00075"/>
+                      <joint name="bend2_9" class="bend2" pos="0 0 0.00075"/>
+                      <joint name="twist_9" class="twist" pos="0 0 0.00075"/>
+                      <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                      <site name="s_9" class="hole" pos="-0.00104 0 0.00075"/>
+                      <body name="notch_10" pos="0 0 0.003">
+                        <joint name="bend_10"  class="bend"  pos="0 0 0.00075"/>
+                        <joint name="bend2_10" class="bend2" pos="0 0 0.00075"/>
+                        <joint name="twist_10" class="twist" pos="0 0 0.00075"/>
+                        <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                        <site name="s_10" class="hole" pos="-0.00104 0 0.00075"/>
+                        <body name="notch_11" pos="0 0 0.003">
+                          <joint name="bend_11"  class="bend"  pos="0 0 0.00075"/>
+                          <joint name="bend2_11" class="bend2" pos="0 0 0.00075"/>
+                          <joint name="twist_11" class="twist" pos="0 0 0.00075"/>
+                          <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                          <site name="s_11" class="hole" pos="-0.00104 0 0.00075"/>
+                          <body name="notch_12" pos="0 0 0.003">
+                            <joint name="bend_12"  class="bend"  pos="0 0 0.00075"/>
+                            <joint name="bend2_12" class="bend2" pos="0 0 0.00075"/>
+                            <joint name="twist_12" class="twist" pos="0 0 0.00075"/>
+                            <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                            <site name="s_12" class="hole" pos="-0.00104 0 0.00075"/>
+                            <body name="notch_13" pos="0 0 0.003">
+                              <joint name="bend_13"  class="bend"  pos="0 0 0.00075"/>
+                              <joint name="bend2_13" class="bend2" pos="0 0 0.00075"/>
+                              <joint name="twist_13" class="twist" pos="0 0 0.00075"/>
+                              <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                              <site name="s_13" class="hole" pos="-0.00104 0 0.00075"/>
+                              <body name="notch_14" pos="0 0 0.003">
+                                <joint name="bend_14"  class="bend"  pos="0 0 0.00075"/>
+                                <joint name="bend2_14" class="bend2" pos="0 0 0.00075"/>
+                                <joint name="twist_14" class="twist" pos="0 0 0.00075"/>
+                                <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                                <site name="s_14" class="hole" pos="-0.00104 0 0.00075"/>
+                                <body name="notch_15" pos="0 0 0.003">
+                                  <joint name="bend_15"  class="bend"  pos="0 0 0.00075"/>
+                                  <joint name="bend2_15" class="bend2" pos="0 0 0.00075"/>
+                                  <joint name="twist_15" class="twist" pos="0 0 0.00075"/>
+                                  <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                                  <site name="s_15" class="hole" pos="-0.00104 0 0.00075"/>
+                                  <body name="notch_16" pos="0 0 0.003">
+                                    <joint name="bend_16"  class="bend"  pos="0 0 0.00075"/>
+                                    <joint name="bend2_16" class="bend2" pos="0 0 0.00075"/>
+                                    <joint name="twist_16" class="twist" pos="0 0 0.00075"/>
+                                    <geom class="seg" mesh="notch_mesh" pos="-0.00175 0.00175 -0.047" quat="0.70710678 0.70710678 0 0"/>
+                                    <site name="s_16" class="hole" pos="-0.00104 0 0.00075"/>
+                                    <body name="distal_tip" pos="0 0 0.003">
+                                      <geom class="seg" mesh="distal_mesh" pos="-0.00175 0.00175 -0.0485" quat="0.70710678 0.70710678 0 0"/>
+                                      <site name="s_tip" class="hole" pos="-0.00104 0 0.0014"/>
+                                      <site name="tip" pos="0 0 0.0015" size="0.0005" rgba="1 0 0 1"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </body>
+</mujocoinclude>
