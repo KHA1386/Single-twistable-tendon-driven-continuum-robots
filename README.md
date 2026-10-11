@@ -21,16 +21,7 @@ Sau đó chạy một trong hai lệnh dưới đây ở **thư mục gốc** c�
 | Lệnh | Bạn sẽ thấy gì |
 |---|---|
 | `python -m mujoco.viewer --mjcf=assets/models/model16n.xml` | Cửa sổ MuJoCo hiện robot màu xanh gồm 16 đốt đứng thẳng trên mặt sàn, sợi gân màu đỏ chạy dọc thân. Mở mục **Control** bên phải: kéo thanh `pull_push` để robot cong, kéo `twist` để xoắn. |
-| `python tools/check.py` | In ra terminal: chiều dài gân khi robot thẳng (khoảng `0.0494` m) và vị trí đầu tip khi `pull_push` = 0, −0.002, +0.002. Dùng để kiểm tra mô hình có chạy đúng không. |
 
-Kết quả mẫu của `check.py` khi mô hình đúng:
-
-```
-chiều dài dây khi thẳng: 0.0494 (mong đợi ≈ 0.0494)
-ctrl=+0.0000  tip=(+0.0000, +0.0000, +0.0575)
-ctrl=-0.0020  tip=(-0.0357, +0.0000, +0.0301)
-ctrl=+0.0020  tip=(+0.0357, +0.0000, +0.0301)
-```
 
 ---
 
@@ -57,7 +48,6 @@ ctrl=+0.0020  tip=(+0.0357, +0.0000, +0.0301)
 │           └── model2n.xml        [PHỤ TRỢ] mô hình thử 2 đốt
 ├── mujoco_sim/                    [CHƯA MÔ TẢ] code mô phỏng (xem mục 5)
 ├── tools/
-│   ├── check.py                   [CHÍNH] kiểm tra nhanh mô hình
 │   └── merge.py                   [PHỤ TRỢ] gộp mesh các đốt
 └── README.md
 ```
@@ -77,9 +67,6 @@ Chú thích: **[CHÍNH]** là file bạn cần đọc hoặc chạy. **[PHỤ TR
 | `part/chain.xml` | Chuỗi thân robot: đế → 16 notch → đốt distal. Mỗi notch có 3 khớp đàn hồi (xem mục 4) và một `site` đặt tại lỗ luồn gân. |
 | `part/tendon.xml` | Khai báo gân: `tendon_pull` là sợi gân thật đi qua lỗ của từng notch; `bend_total` và `twist_total` là tổng góc uốn và xoắn. |
 | `part/actuator.xml` | Hai bộ điều khiển: `pull_push` (kéo-đẩy gân) và `twist` (xoắn). |
-
-### `tools/check.py`
-Nạp `model16n.xml`, in chiều dài gân khi robot thẳng, rồi chạy mô phỏng 2 giây ở ba mức `pull_push` khác nhau và in vị trí đầu tip. Chạy nó sau mỗi lần sửa mô hình để chắc rằng robot vẫn thẳng ở `ctrl = 0` và cong đúng hướng khi kéo.
 
 ---
 
